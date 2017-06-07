@@ -1,0 +1,51 @@
+Week7-1
+if initializer is too short or too long, the compiler will fill with extra null characters
+must leave room for null character
+
+accessing the characters in a string
+easier to use pointer arithmetic versis array indexing
+
+int char_count(char *a)
+{
+char *p
+int count=0;
+	for(p = s; *p!='\0';p++)
+		count++;	
+return count;
+}
+
+reading and writing strings
+
+the %s conversion specification allows printf to write a string
+char str[]="are we having fun yet?"
+printf("%s",str);
+
+char str[20];
+printf("%s",str);
+str is treated as a pointer
+
+scanf skips leading white space, then reads folowing characters, then stops at any following white space
+
+scanf can not detect when it is full. therefore it may store character past the boundary of he array
+using %ns makes it safer, where n is the number of maximum characters allowed
+
+new line space or tab will make scanf stop
+
+we can use gets function to read an entire line of input
+
+char sent[sent_length+1];
+printf("enter a sentence");
+gets(sent);
+
+gets has no way to deteremine if an array is full.
+
+writing our own input function
+-prototype
+	int read_line(char_string[], int n);
+this will return the number of characters in a string
+read_line consists of a loop that calls getchar to read a character and then stores the characer in str, provided there is room left
+
+ch has int type rather than char type because getchar return an int value
+
+
+when using pointers, still need an i to coun the number of charactersthat have been stored as to prevent an overflow.

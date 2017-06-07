@@ -1,0 +1,67 @@
+week 5-1
+Organizing Programs
+Local variables versus Global
+Scope of Variables
+Intro to pointers
+
+info to include in comment 
+	name of function
+	purpose of function
+	meaning of parameters
+	description of return value
+	if it modifies any variables
+
+Variable declared in the body is said to be local
+	said to be block scope { here }
+it is visible from its declaration to the end of the closing bosy function
+
+External (Global) Variables
+Passing arguments is one way to transmit to a function
+functions can also communicate through external variables
+Static storage duration, as long as executiion of program is current
+can run into problems when multiple functions have access to it.
+its better for functions to ommunicate through parameters versus global variables
+
+excercise
+int b = 0, c = 2;
+void f(void){
+	int b = 5; 
+	b++;
+	printf("%D %d|n", b, c);
+}
+int main(void){
+	int b = 2;
+	 c++;
+	f();
+	printf("%d, %d\n:, b ,c);
+}
+
+Pointers
+need to know what they are, how to use them, big for dynamic memory allocation
+
+Undestading what they represesnt at the machine level
+Addresses can be stored in pointer variables
+
+int *p;
+* means its a pointer and its pointing to an int
+p = &i;
+
+use seperate lines for pointer variables to avoid confusion
+to print a pointer printf("%p", *p);
+
+must initialize a pointer otherwise it points nowhere
+
+Indirection Operator
+*p = 35;
+looks at the address and changes the variable at that location
+
+address operator
+posibile to declare and initialize a pointer at the same time
+int *p = &i;
+
+Inidication OPerator
+As long as p points to i *p is an alias for i
+*p has the same vaue as i
+changing the value of *p changes the value of i
+p represents memory location 
+*p represents value at that location

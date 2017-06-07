@@ -1,0 +1,52 @@
+Week 3-1
+escape sequences
+increment and decrement operators
+loop
+
+escape sequence
+\b - backspace 
+\n - new line
+\t - tab 
+\" - double quote
+\\ - single quote
+
+Increment & decrement ++ --
+++i,--i preincrement, decrement
+i++ postincrement, decrement
+
+Loops: while, do, and for
+
+for loop
+for(exp1, exp2, exp3)
+exp1 = initiialiation
+exp2 = condition
+exp3 increment
+can omit and and all expressions that control a for statement
+
+with commas, for loop can initialize more than one variable
+
+for ( exp a, exp b, condition, increment)
+
+omitting the condition can cause an infinite loop
+	ex: for(;;)
+while loop
+int  i = 10;
+While( i > 0)
+{
+	printf(" T minus %d and counting\n", i);
+	i--;
+}
+
+
+break statement transfers control out of a loop
+can only transfer control out of one level, nested loops with ounly break to the next heirarchy
+
+for(;;) == for(; n!=0;)
+
+continue statement
+	transfers control to a point just before the end of a loop body
+
+null statement
+	primarily good for writing loops whose bodies are empty
+
+crt-c terminates an infinite loop

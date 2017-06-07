@@ -1,0 +1,62 @@
+week7-2
+String Library Funtions
+Array of Strings and Command Line Arguments
+
+Strings are treated as arrays so they are restircted
+
+can not be copied or compared using operators
+
+comparing str2 == str1 compares pointers so wll not give desired results
+
+
+
+prototype for strlen
+
+size_strlen()
+
+prototype for strng copy
+
+char *strcpy(char *s1, const char *s2)
+
+strcpy copies the string pointed to by s2 into the array pointde at array s1
+
+char *strcat(char *s1, const char *s2)
+
+appends the contents of the string s2 to the ned of string s1
+
+string comparison
+int strcmp(const char *s1, const char *s2)
+
+compares the strings s1 and s2, returning a value les than,equal to or greater than 0, depending on whether s1 is less than, equal to, or greater than s2
+
+strcmp looks at the numerical values to make comparisons
+
+A-Z,a-z,0-0 are al consecutive
+Upper case are all less than lower case
+
+Array of Strings
+
+There is more than on e way to store an arrayof strings
+One option is to use a two-dimensional array of characters with one string per row
+the number of rows in the array can be ommited
+
+Most collections of strings will have a mix of long and short strings
+We can creat an array whose elements are pointers to strings
+*saves space
+
+
+To access one of the planets names, all we need to do is subscript the planets
+
+Command Line Arguments
+
+to obtain access to command line arguements use these parameters in main
+int main(int argc, char * argv[])
+{
+body
+}
+
+functions in stdlib.h that convert string to numerical values
+
+double atof(const char *s1)
+float atoi(const char*s1)
+

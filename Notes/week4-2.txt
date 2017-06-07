@@ -1,0 +1,63 @@
+week4-2
+
+
+
+
+
+functions can not return arrays
+specifying that the return type is void indication that there will be no return integer
+
+a void function can be empty
+leaving the body empty makes sense as a temp solution
+
+a function call consists of a function name followed by  list of arguments
+
+declare functions before main then define the functions afterwards
+
+arguments are passed by value, initial values are not changed 
+
+return statement
+return in a void function just returns to main
+
+Array arguments
+when a function parameter is 1-d array, the length should be left unspecified
+
+dont put brackets after and array name when passing it to a function
+
+
+int find_largest_index(int[],int n)
+{	int i;
+	int max = 0;
+
+	for(i = 1,i<n;i++)
+	{	if(a[i] > a[max])
+			max = i;
+
+			
+	return max;
+
+}
+
+
+Recursion
+will be used in data structures/algorithims
+
+a function that calls istelf
+
+	int fact(int n)
+	{
+	if(n<=1)
+	return 1;
+	else
+	return n * fact(n-1);
+	}
+
+all recursive function needs some kind of termination condition in order to prevent infinite recursion
+	
+to implement a swap in a prgram
+	int x, y;
+	int temp;
+	
+	y = temp;
+	
+	

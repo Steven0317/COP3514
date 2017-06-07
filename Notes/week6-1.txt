@@ -1,0 +1,58 @@
+week6-1
+Pointers and Arrays: Pointer Arithmetic
+Using pointers for array processing
+
+C allows arithmetic on pointers, allowing the pointers to take the place of the subscript
+
+Pointers can point to array elements
+int a[10];
+int *p;
+*p = &a[0]
+
+
+int *p = a[0]
+for(;;)
+	if(*p > a[i])
+		p_min = &a[i]
+
+if p points to an element of a the other elements can be accessed by performing pointer arithmetic
+
+C supports three forms of pointer arithmetic
+	add int to a pointer
+	subrtacting an int from a pointer
+	subtracting one pointer from another
+
+Adding an int to a pointer
+
+	p = &a[2];
+	q = p + 3;
+	p+= 6;
+
+Subtracting an int from a pointer
+	
+	p = &a[8];
+	q = p -3;
+	p -= 6;
+
+Subtracting one pointer from another
+
+	result is the distance(measured in array elements) between the two
+	p = a[i] 
+	q = a[j]
+	p-q == i-j
+
+	operations that cause undefined behavior
+	performing arthimetic ona pointer that doesnt point to an array element
+	subtracting pointerrs but they do not point to elemnts of the same array
+
+Integers used in pointer arithmetic are scaled depending on the type of pointer
+
+if p is a type int * then p + j typically adds 4 X j to p assuming the values are stored using 4 bytes	
+for double it would be 8 x j to p
+
+int *p
+for( p = &a[0];p < &a[n] ; p++)
+ *p = variable;
+
+this is legal because the loop doesnt attempt to esamine its value
+

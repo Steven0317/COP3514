@@ -1,0 +1,49 @@
+chapter 4 & 5 
+expressions and conditional statements 
+
+assignment is an operator so x = y =z = 0
+= operator is right assosiative so i = (j = (k =0));
+lvalue is an object stored in computer memory- variables, not a constant or the result of computation
+12 = i
+i + j = 0
+wrong examples
+
+Selection Statements
+
+if/else 
+if value is nonvero, statement will be executed
+logical operator <,>,+,= etc produce either 09false) or 1(true)
+
+logical error
+i< j < k 
+correct format
+i < j && j <k
+
+C follows the rule that an else clause belongs to the closest if statement
+
+cascaded if else
+	if
+	else
+		if
+		else
+			if
+			else
+
+	if
+	else if
+	
+	else if
+
+boolean Values in c89
+
+gcc -std = c99 -Wall canme.c
+
+declare an int and assign it to either 1 or 0
+
+int flag;
+flag = 0;
+flag = 1;
+
+scanf cont'd
+user entered slashes 
+scanf("%d/%d)

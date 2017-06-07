@@ -1,0 +1,70 @@
+week 3 - 2
+Unix: Vi/Vim
+Integer types
+characters
+
+Vim
+: set nu - displays line nmber
+: set nu! stops the former
+regular mode
+-yy and p for copy and paste
+V is for visual mode
+can select mulitple lines for copy and paste
+-dd deletes a line of code
+
+man vim will give all commands
+
+Integer Types
+signed and unsigned
+integers are signed in C
+the left most bit is reversed for the sign
+
+to declare a variable with no sign bit: unsigned int alpha;
+unsinged non negative number are primarily used for low level program(system drivers)
+
+INT_MAX is large enough for most things but not everything
+
+Integer Overflow
+when outcome of arthimetic requires more bits that it is allocated 
+ex: 
+	long i;
+	int j = 1000000000
+	i = j * j // overflow may occur
+two ways to avoid this;
+we can declare j as a long int 
+or we can cast: i = (long) j * j;
+
+Floating
+-float 32bit
+-double 64bit
+
+Type Casting
+going from smaller type to largger type can be done implicitly 
+going from larger to smaller you lose precision
+
+Characters
+ASCII code
+character type
+defines english letters
+digits 0-9
+punctuation
+control characters
+
+C uses an integer value for characters
+scanf("%c", &ch); // reads one character
+printf("%c", ch); // writes one character
+
+to skip scan f from reading white space add a space before percent c " %c"
+
+ch = getchat(); faster function than scanf()
+getchar return an int value
+
+scanf and getchar dont always get along
+
+use getchar(); to pick up new line character 
+"Think scan.nextInt in Java to reset the prgram to ask for the next variable"
+
+ex1 first display printable characters start from 32 to 126
+display chracter itself and the number
+ex2 use get char to change a user input message from lower to upper
+ex3learn to use character handling functions modify ex2 to test whether a character is a letter and is lower case

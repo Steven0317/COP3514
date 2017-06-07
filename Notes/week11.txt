@@ -1,0 +1,87 @@
+week 11
+Input/Output
+
+Read, write text data to and from files
+	functions designed specifically for use with files, including functions that open and close files
+
+Streams
+	any source of input or any desination for output
+most programs optain their input from one stream(keyboard) and write all their output to another stream(the screeen)
+
+File buffering
+	transfering data to or from a disk drive us a relatively slow operation
+	secret to acheiving acceptable erformance is buffering
+	data written to a stream is stored in a buffer memory
+
+	Buffering can result in enormous gains in efficiency, since reading a bytle from a buffer or storing a 	byte can take a long time
+
+	Have to open the file first
+	fopen()
+	fclose()
+	reading: fgets()
+	writing: fputs()
+
+EXAMPLE
+
+	FILE *pfile;
+	pfile = fopen("Test.txt","r");
+
+EX2
+
+FILE *pfile;
+pfile(fopen("test.txt","r");
+
+
+
+fopen()
+
+FILE* fopen(char* filename, char* mode)
+
+Filename: string
+	modes:
+		r read	 file must exist
+		w write	 file doesnt have to exist
+		a append file doesnt have to exist
+
+
+fgets()
+read a line of text from a file
+can also use with standard standard input
+
+char * fgets(char * buffer, int max, FILE * pfile)
+
+char * = returns null incase of error
+buffer = address of input buffer
+max = max number of characters
+pfile = file name
+
+reads to the end of line of max -1 characters have been read, whichever happens first
+newline character is included in the buffer(unlike gets)
+(null char terminator)
+
+fclose()
+
+allows a program to close a file it is no longer using
+argument of flcose() must be a file pointer obtained from a call of fopen
+
+fclose()
+-writes any buffered data to a file
+-frees resources ised by the file
+fclose() returns a 0 if it was closed succesfully
+otherwise an error code of EOF will occur
+
+to write a line of test ot a file use the function fputs()
+fputs does not write a new line character
+
+int fputs(char *s, file * pfile);
+int = returns eof on error
+char * = pointer to text string to be written
+file = pointer returned by fopen
+
+
+project
+(A)
+open an read from a file
+read line by line using fgets funnction then call the translate function
+check character by character for digits
+the set of digits will be stored in a string that will be written to a new file that you will create and write to that file

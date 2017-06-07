@@ -1,0 +1,36 @@
+week 11-2
+obtaining File names from the command line
+formatted file input and output
+
+scanf("%d", &var);
+fscanf ( fp, "%d", &var);
+fgets reds in whole line use fgets = null to detect end of file
+int fscanf(FILE *pfile, char *format, ...)
+int = returns number of variables filled or eof on error
+file = poiniter to poen file struct
+char = format sting
+... = variables to read into
+
+
+having program obtain file names from command line is best solution
+ex: ./a.out name.txt
+
+remember to use
+int main(int argc, char * argv[]){
+...
+}
+argc is number of arguments
+argv array of pointers to the the argument string
+
+writing formatted output
+fprintf function
+-writes to stream indicated by first argument
+
+a call of printf is equivilant to fprintf with stdout as the first argument
+
+int fprintf(FILE * pfile, char *format, ...)
+int: returns eof on error usally ignored
+FILE: pointer to file struct
+Char: format string
+...: variables to be formatted
+

@@ -1,0 +1,29 @@
+week4-1
+
+Unix commands
+1d array
+multi-d arrays
+
+1d arrays
+
+int a[10]
+-elements can be on any type the length can be any constant integer expression
+use macros to define the length of arrays
+#define N 10
+int array[N]
+
+elements of an array are from 0 to n-1
+to index an array call the array followed by the position within brackets array[4]
+
+boundaries aren't checked in C, if subscript is out of range can experience undefined behavior
+
+if initializer is shorter than the array, the remaining elements are given the value of 0
+inta[10] ={0};-initializes the whole array to 0
+
+Mulitdimensional array
+C stores 2-d arrays in a row-major order with row 0 first then row 1, etc
+
+nested for loops are best for processing multi dimensional arrays
+
+Arrays can be made constant by starting its declaration with const
+-program won't change the array, helps compiler catch errors

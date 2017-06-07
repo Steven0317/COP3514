@@ -1,0 +1,78 @@
+Week 13-2
+Linked list, how to creat and what it is. 
+Using malloc inseart search delete clear
+
+Linked List
+
+useful for building lists trees, graphs and other linked data structures
+
+A linked list consists of a chain of structures(called nodes), with each node containing a pointer to the next node in the chain, the last node is makred by a null pointer( think of a character string)
+
+Why is it needed?
+
+It is more felxible than an array, we can easily insert and delete nodes in a linked list, allowing the list to grow and shrink as needed
+
+We also lose the random access capability of an array
+
+must go sequentially through a linked list to find a specific node
+
+To set up a linked list, we'll need a structure that represents a single node
+
+A node structure will contain data plus a pointer to the nest node
+
+Next we'll need a variable thst always points to the first node in the list
+
+To insert something into the linked list, we'll create a node then put it into the linked list
+
+we need a variable that always points to the node
+
+will also need a variable that point to the node temporaririly
+
+-> is equivalent to (* ).
+
+(*new_node).value == new_node->value
+
+
+Inserting at the beginning of a linked list
+
+first, we must modify the new node nest memeber to point to the node that was previously at the beginning of the list
+
+then we make first point to the new node
+
+
+Project-- main thing is appending to the list
+
+Searching a linked list
+
+a for loop is better for searching through a linked list
+
+use a pointer variable to keep track of current node
+
+for( p = list; p!= NULL; p++)
+	...
+a loop of this for can be used in a function tat searches foran integer N
+
+If it finds n, the function will return a pointer to the node containing n, otherwise it will return a null pointer
+
+Delete function in nodes
+
+1. locate the node to be deleted
+2. alter the previous node so that it bypasses the delted node
+3. call free to reclaim the space occupied by the deleted node
+
+Need two pointer to keep track of deleted's previous node and its next node
+
+clearing a list
+
+before the program terminates, we should release the memory thst was occupied by the nodes in the linked list
+
+void clearLIst(struct node *list){
+
+struct nde *p;
+while(list != NULL{
+	p = list;
+	list = list->next;
+	if (p != NULL)	
+	  free(p);
+}
+}

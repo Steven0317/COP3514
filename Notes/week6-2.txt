@@ -1,0 +1,26 @@
+week6-2
+++i means increment immediately
+i++ means use the old value for now then increment later
+can combine *(direction) and ++
+
+compiler sees *p++ = j as
+*(p++) and not (*p)++
+
+*p++ is most handy for loops
+sum of elements in array:
+for(p = &a[0]; p< &a[N]; p++)
+sum =+ *p;
+
+int a[10]
+*a = 7 means a[0] is 7
+*(a+1) = 12 means a[1] is 12
+in general (a+1) is the same as a[i]
+
+int * p_min= a
+for(p = a+1; p < a+n ;p++)
+
+Segmentation Fault
+means trying to access memory that doesnt belong to it
+failure to intialize a pointer
+forgetting a & or * in scanf of function as pointers
+incorrect use of & or *
